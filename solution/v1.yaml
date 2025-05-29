@@ -1,24 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydeployment
+  name: yeabtsega
+  annotations:
+    submitted-by: "yeabtsega-yifat-ugr9766"
   labels:
-    app: mywebapp
+    app: yeabtsega
     tier: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mywebapp
+      app: yeabtsega
       tier: frontend
   template:
     metadata:
       labels:
-        app: mywebapp
+        app: yeabtsega
         tier: frontend
     spec: # Pod spec
       containers:
-      - name: mycontainer
-        image: devopsjourney1/mywebapp
-        ports:
-        - containerPort: 80
+        - name: mycontainer
+          image: devopsjourney1/yeabtsega
+          ports:
+            - containerPort: 80
